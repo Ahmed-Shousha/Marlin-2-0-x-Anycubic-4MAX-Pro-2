@@ -653,7 +653,7 @@
  *
  */
 #if ENABLED(KNUTWURST_4MAXP2)
-  #define TEMP_SENSOR_0 11
+  #define TEMP_SENSOR_0 5
 #else
   #define TEMP_SENSOR_0 1
 #endif
@@ -729,7 +729,7 @@
 
 // Below this temperature the heater will be switched off
 // because it probably indicates a broken thermistor wire.
-#define HEATER_0_MINTEMP   1
+#define HEATER_0_MINTEMP   5
 #define HEATER_1_MINTEMP   1
 #define HEATER_2_MINTEMP   1
 #define HEATER_3_MINTEMP   1
@@ -743,7 +743,7 @@
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 300
+#define HEATER_0_MAXTEMP 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -1525,7 +1525,7 @@
 
 #if ENABLED(KNUTWURST_4MAXP2)
   #define DEFAULT_ACCELERATION          800    // X, Y, Z and E acceleration for printing moves
-  #define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
+  #define DEFAULT_RETRACT_ACCELERATION  800    // E acceleration for retracts
   #define DEFAULT_TRAVEL_ACCELERATION   1000    // X, Y, Z acceleration for travel (non printing) moves
 #endif
 
@@ -1873,7 +1873,7 @@
 #define Z_PROBE_FEEDRATE_FAST 600// HOMING_FEEDRATE_Z
 
 // Feedrate (mm/min) for the "accurate" probe of each point
-#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
+#define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 1)
 
 /**
  * Probe Activation Switch
@@ -2854,16 +2854,16 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
+#define PREHEAT_1_TEMP_HOTEND 230
 #define PREHEAT_1_TEMP_BED     70
 // #define PREHEAT_1_TEMP_CHAMBER 35
-#define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
+#define PREHEAT_1_FAN_SPEED     100 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
 #define PREHEAT_2_TEMP_BED    110
 // #define PREHEAT_2_TEMP_CHAMBER 35
-#define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
+#define PREHEAT_2_FAN_SPEED     100 // Value from 0 to 255
 
 // @section motion
 
